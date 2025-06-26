@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seltz AI – Humans Search. Agents Seltz.</title>
+  <style>
+    :root{
+      --brand:#0077ff;
+      --dark:#0f1117;
+      --gray:#6b7280;
+      --light:#f9fafb;
+      --radius:12px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+    body{background:var(--light);color:var(--dark);line-height:1.5;-webkit-font-smoothing:antialiased}
+    a{color:var(--brand);text-decoration:none}
+    header{position:sticky;top:0;background:#fff;border-bottom:1px solid #e5e7eb;z-index:30}
+    .wrapper{max-width:1280px;margin:0 auto;padding:0 1.2rem}
+    nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+    nav .logo{font-size:1.45rem;font-weight:700;letter-spacing:-.5px}
+    nav ul{display:flex;gap:1.6rem;list-style:none}
+    nav ul li{font-size:.95rem}
+    .btn{display:inline-block;padding:.65rem 1.3rem;border-radius:var(--radius);font-weight:600;font-size:.95rem}
+    .btn-primary{background:var(--brand);color:#fff}
+    .btn-outline{border:1px solid var(--brand);color:var(--brand);transition:.15s}
+    .btn-outline:hover{background:var(--brand);color:#fff}
+    .btn-light{color: white}
+    /* ===== Hero ===== */
+    .hero{padding:5.5rem 0 4rem;text-align:center}
+    .hero h1{font-size:clamp(2.3rem,5vw,3.5rem);font-weight:800;line-height:1.15;margin-bottom:1.1rem}
+    .hero p{font-size:1.15rem;color:var(--gray);max-width:640px;margin:0 auto 2.2rem}
+    /* ===== Features & Advantage ===== */
+    .features,.advantages{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:2rem;padding:3.5rem 0}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:var(--radius);padding:2rem}
+    .card h3{font-size:1.15rem;margin-bottom:.6rem}
+    .card p{font-size:.94rem;color:var(--gray)}
+    .card span{font-size:1.6rem;display:block;margin-bottom:.6rem}
+    /* ===== CTA ===== */
+    .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:3rem 2rem;text-align:center;margin:4rem 0}
+    .cta h2{font-size:1.8rem;margin-bottom:1rem;font-weight:700}
+    .footer{padding:2rem 0;color:var(--gray);font-size:.85rem;text-align:center}
+    /* ===== Mobile nav ===== */
+    .hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer}
+    .hamburger span{width:22px;height:2px;background:var(--dark)}
+    @media(max-width:720px){
+      nav ul{position:absolute;top:72px;right:0;background:#fff;flex-direction:column;padding:1rem 1.5rem;border:1px solid #e5e7eb;border-right:none;border-bottom-left-radius:var(--radius);display:none}
+      nav ul.show{display:flex}
+      .hamburger{display:flex}
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header>
+    <div class="wrapper">
+      <nav>
+        <a class="logo" href="#">Seltz<span style="color:var(--brand)">.ai</span></a>
+        <ul id="nav-list">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#advantages">Why Seltz</a></li>
+          <li><a href="https://docs.seltz.ai" target="_blank" rel="noopener">Docs</a></li>
+          <li><a href="mailto:hello@seltz.ai">Contact</a></li>
+        </ul>
+        <div><a class="btn btn-outline" href="https://docs.seltz.ai#get-started" target="_blank">Get API Key</a></div>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="wrapper">
+      <h1>Humans Search.<br class="mobile-break">Agents Seltz.</h1>
+      <p>Seltz is the live‑web interface built for autonomous agents & LLMs — always evolving, forever curious.</p>
+      <a class="btn btn-primary" href="https://docs.seltz.ai#get-started" target="_blank">Start free →</a>
+    </div>
+  </section>
+
+  <!-- ===== Core Features ===== -->
+  <section id="features">
+    <div class="wrapper">
+      <div class="features">
+        <div class="card"><span>🔄</span>
+          <h3>Ever‑Fresh Feed</h3>
+          <p>Knowledge that keeps pace with the web so your agents never act on yesterday’s facts.</p>
+        </div>
+        <div class="card"><span>🤖</span>
+          <h3>Agent‑Native</h3>
+          <p>Purpose‑built for reasoning engines, task runners, and orchestrators — no scraping or hacks required.</p>
+        </div>
+        <div class="card"><span>🕸️</span>
+          <h3>Context Connections</h3>
+          <p>Signals surface with the threads that bind them, helping agents stitch insights into smarter plans.</p>
+        </div>
+        <div class="card"><span>📈</span>
+          <h3>Grows With You</h3>
+          <p>From weekend hack to global deployment on a simple usage‑based path.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Competitive Advantages ===== -->
+  <section id="advantages">
+    <div class="wrapper">
+      <h2 style="text-align:center;font-size:1.9rem;font-weight:700;margin-bottom:2.2rem">Why Switch to Seltz?</h2>
+      <div class="advantages">
+        <div class="card"><span>🎯</span>
+          <h3>Sharper Answers</h3>
+          <p>LLM‑graded benchmarks and developer‑tuned quality filters surface higher‑signal results without the noise.</p>
+        </div>
+        <div class="card"><span>⚡</span>
+          <h3>Predictable Speed</h3>
+          <p>Cache‑primed index paths deliver responses in a blink, with deeper analysis on demand when you need it.</p>
+        </div>
+        <div class="card"><span>🛠️</span>
+          <h3>One API, Zero Overhead</h3>
+          <p>Streamlined SDKs get agents searching in minutes — no extra endpoints, no hidden complexity.</p>
+        </div>
+        <div class="card"><span>💡</span>
+          <h3>Transparent Pricing</h3>
+          <p>Clear, usage‑based tiers and a generous free quota keep experiments fun and budgets sane.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Call-to-Action ===== -->
+  <section class="cta">
+    <div class="wrapper">
+      <h2>Your agents deserve smarter search.</h2>
+      <p style="margin-bottom:1.5rem">Plug in Seltz and give them the web at light‑speed clarity.</p>
+      <a class="btn btn-light btn-outline btn-white" href="https://docs.seltz.ai" target="_blank">Read the Docs →</a>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="wrapper">© 2025 Seltz. All rights reserved · <a href="#">Terms</a> · <a href="#">Privacy</a></div>
+  </footer>
+
+  <!-- ===== JS: mobile nav & smooth scroll ===== -->
+  <script>
+    const navList=document.getElementById('nav-list');
+    document.getElementById('hamburger').addEventListener('click',()=>navList.classList.toggle('show'));
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});navList.classList.remove('show');});
+    });
+  </script>
+</body>
+</html>
